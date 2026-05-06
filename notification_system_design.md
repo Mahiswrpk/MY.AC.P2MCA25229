@@ -49,3 +49,24 @@ You MAY also run these locally:
 
 ```bash id="s8r4tu"
 mysql -u root -p
+
+# Stage 3 — Indexing & Query Optimization
+
+## 3.1 The Slow Query Problem
+
+Without indexes, the database performs a full table scan for notification filtering queries.
+
+Example slow query:
+
+```sql id="z5zkcs"
+SELECT *
+FROM notifications
+WHERE notification_type = 'Placement'
+ORDER BY created_at DESC
+LIMIT 10;
+
+
+# Stage 3 — Indexing & Query Optimization
+
+The indexing strategy prepares the system for high-volume notification traffic in future stages.
+
