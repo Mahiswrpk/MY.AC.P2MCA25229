@@ -1,32 +1,15 @@
-# Notification System Design
+# AffordMed Notification System — System Design Document
 
-## Overview
-This system allows users to receive notifications...
+> **Author:** MY.AC.P2MCA25229  
+> **Version:** Stage 1  
+> **Last Updated:** See git log
 
-## Frontend
-- React
-- Axios
-- Vite
+---
 
-## Backend
-- Node.js
-- Express
+# TABLE OF CONTENTS
 
-## Features
-- Send notifications
-- View notifications
-- Logging middleware
+1. Stage 1 — REST API Design & Architecture
 
-## API Endpoints
+---
 
-### GET /notifications
-Fetch all notifications
-
-### POST /notifications
-Create notification
-
-## Database Design
-Explain collections/tables
-
-## Flow
-Frontend -> Backend -> Database
+# Stage 1 — REST API Design & Architecture
