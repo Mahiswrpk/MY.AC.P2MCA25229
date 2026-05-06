@@ -70,3 +70,20 @@ LIMIT 10;
 
 The indexing strategy prepares the system for high-volume notification traffic in future stages.
 
+---
+
+<a name="stage-4"></a>
+# Stage 4 — Performance, Caching & Scaling
+
+## 4.1 The Problem: Database Overload Under Heavy Traffic
+
+The notification system may eventually serve thousands of users simultaneously.
+
+Example scenario:
+- 10,000 active users
+- each requesting notifications every 30 seconds
+
+Estimated traffic:
+
+```text
+~333 requests per second
