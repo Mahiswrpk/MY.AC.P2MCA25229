@@ -87,3 +87,29 @@ Estimated traffic:
 
 ```text
 ~333 requests per second
+
+---
+---
+
+<a name="stage-5"></a>
+# Stage 5 — Async Notification Architecture
+
+## 5.1 The Problem — Unreliable notify_all Function
+
+A synchronous notification system becomes unreliable at large scale.
+
+Example problematic implementation:
+
+```js id="lt8x4x"
+async function notify_all(notification) {
+
+  const users = await db.getAllUsers();
+
+  for (const user of users) {
+
+    await sendEmail(user.email, notification);
+
+    await saveNotification(user.id, notification);
+
+  }
+}
